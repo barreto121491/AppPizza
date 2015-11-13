@@ -1,25 +1,756 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="AppPizzas" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kic-UY-D12">
+                                <rect key="frame" x="79" y="244" width="250" height="250"/>
+                                <animations/>
+                                <state key="normal" image="Pizzero"/>
+                                <state key="highlighted" image="Smile"/>
+                                <connections>
+                                    <segue destination="bVY-V5-AZP" kind="show" id="ygn-nl-9e4"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Toca Para Comenzar " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q6B-h4-1aQ">
+                                <rect key="frame" x="97" y="145" width="222" height="47"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" name="SavoyeLetPlain" family="Savoye LET" pointSize="38"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                            </label>
+                        </subviews>
+                        <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Kic-UY-D12" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="1" id="CK2-bO-hMX"/>
+                            <constraint firstItem="q6B-h4-1aQ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="1" id="IcN-ac-6td"/>
+                            <constraint firstItem="Kic-UY-D12" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="-3.5" id="Knf-ub-VeJ"/>
+                            <constraint firstItem="Kic-UY-D12" firstAttribute="top" secondItem="q6B-h4-1aQ" secondAttribute="bottom" constant="52" id="NJc-Ir-N6H"/>
+                        </constraints>
                     </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="262" y="289"/>
+        </scene>
+        <!--Tamano Pizzas-->
+        <scene sceneID="ZrV-HJ-czO">
+            <objects>
+                <viewController id="4ak-F8-g4X" customClass="TamanoPizzas" customModule="AppPizzas" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="0dQ-EP-qiN"/>
+                        <viewControllerLayoutGuide type="bottom" id="1lV-dB-Flv"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Xes-sc-sq1">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9gz-cn-s0E">
+                                <rect key="frame" x="181" y="672" width="64" height="64"/>
+                                <animations/>
+                                <state key="normal" image="next"/>
+                                <state key="highlighted" image="next"/>
+                                <variation key="heightClass=regular" ambiguous="YES" misplaced="YES">
+                                    <rect key="frame" x="268" y="736" width="64" height="64"/>
+                                </variation>
+                                <connections>
+                                    <action selector="nextMasa:" destination="4ak-F8-g4X" eventType="touchUpInside" id="mxR-8V-1va"/>
+                                    <segue destination="82Y-NK-kYK" kind="show" id="HgU-gS-Mpd"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tamaño de Pizza" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4iD-2y-QHm">
+                                <rect key="frame" x="138" y="43" width="138" height="36"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" name="SavoyeLetPlain" family="Savoye LET" pointSize="30"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yN7-Gt-4Rz">
+                                <rect key="frame" x="175" y="148" width="64" height="64"/>
+                                <animations/>
+                                <state key="normal" image="PizzaTam"/>
+                                <state key="highlighted" image="Smile"/>
+                                <connections>
+                                    <action selector="chica:" destination="4ak-F8-g4X" eventType="touchUpInside" id="JhP-kz-P49"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vtB-HG-BLO">
+                                <rect key="frame" x="175" y="409" width="64" height="64"/>
+                                <animations/>
+                                <state key="normal" image="PizzaTam"/>
+                                <state key="highlighted" image="Smile"/>
+                                <connections>
+                                    <action selector="grande:" destination="4ak-F8-g4X" eventType="touchUpInside" id="3Sf-pK-ISi"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="chica" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lhE-eb-9Vv">
+                                <rect key="frame" x="187" y="111" width="41" height="36"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="41" id="pAf-OF-Nph"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="SavoyeLetPlain" family="Savoye LET" pointSize="30"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mediana" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="257-yp-aFq">
+                                <rect key="frame" x="170" y="232" width="75" height="36"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="75" id="Tnh-dN-ssd"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="SavoyeLetPlain" family="Savoye LET" pointSize="30"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Grande" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bW1-sU-oPo">
+                                <rect key="frame" x="178" y="365" width="58" height="36"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="58" id="Db4-2O-fvM"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="SavoyeLetPlain" family="Savoye LET" pointSize="30"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2hI-A0-geB">
+                                <rect key="frame" x="175" y="276" width="64" height="64"/>
+                                <animations/>
+                                <state key="normal" image="PizzaTam"/>
+                                <state key="highlighted" image="Smile"/>
+                                <connections>
+                                    <action selector="mediana:" destination="4ak-F8-g4X" eventType="touchUpInside" id="53R-Ic-0DJ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="vtB-HG-BLO" firstAttribute="leading" secondItem="9gz-cn-s0E" secondAttribute="leading" constant="-6" id="0W0-5v-mqL"/>
+                            <constraint firstItem="vtB-HG-BLO" firstAttribute="top" secondItem="bW1-sU-oPo" secondAttribute="bottom" constant="8" symbolic="YES" id="Hz3-TI-RUV"/>
+                            <constraint firstItem="2hI-A0-geB" firstAttribute="leading" secondItem="vtB-HG-BLO" secondAttribute="leading" id="LlL-Zj-7JC"/>
+                            <constraint firstItem="257-yp-aFq" firstAttribute="top" secondItem="yN7-Gt-4Rz" secondAttribute="bottom" constant="20" id="RJD-0v-418"/>
+                            <constraint firstItem="4iD-2y-QHm" firstAttribute="top" secondItem="0dQ-EP-qiN" secondAttribute="bottom" constant="23" id="V2m-Ly-gvp"/>
+                            <constraint firstItem="vtB-HG-BLO" firstAttribute="centerX" secondItem="bW1-sU-oPo" secondAttribute="centerX" id="WE8-lY-Vn7"/>
+                            <constraint firstItem="9gz-cn-s0E" firstAttribute="centerX" secondItem="Xes-sc-sq1" secondAttribute="centerX" constant="6" id="XX8-yL-aUH"/>
+                            <constraint firstItem="lhE-eb-9Vv" firstAttribute="top" secondItem="4iD-2y-QHm" secondAttribute="bottom" constant="32" id="arg-1N-B5i"/>
+                            <constraint firstItem="2hI-A0-geB" firstAttribute="leading" secondItem="yN7-Gt-4Rz" secondAttribute="leading" id="bV3-Ej-PFY"/>
+                            <constraint firstItem="9gz-cn-s0E" firstAttribute="bottom" secondItem="1lV-dB-Flv" secondAttribute="top" id="bs6-el-vrW"/>
+                            <constraint firstItem="bW1-sU-oPo" firstAttribute="top" secondItem="2hI-A0-geB" secondAttribute="bottom" constant="25" id="eth-9I-jCP"/>
+                            <constraint firstItem="2hI-A0-geB" firstAttribute="top" secondItem="257-yp-aFq" secondAttribute="bottom" constant="8" symbolic="YES" id="h4D-ti-Jx6"/>
+                            <constraint firstItem="4iD-2y-QHm" firstAttribute="centerX" secondItem="lhE-eb-9Vv" secondAttribute="centerX" id="jQ2-8j-UkS"/>
+                            <constraint firstItem="9gz-cn-s0E" firstAttribute="bottom" secondItem="1lV-dB-Flv" secondAttribute="top" id="qI7-BO-Ho3"/>
+                            <constraint firstItem="yN7-Gt-4Rz" firstAttribute="top" secondItem="lhE-eb-9Vv" secondAttribute="bottom" constant="1" id="tvA-op-c20"/>
+                            <constraint firstItem="257-yp-aFq" firstAttribute="centerX" secondItem="2hI-A0-geB" secondAttribute="centerX" id="xY0-OO-Hln"/>
+                            <constraint firstItem="yN7-Gt-4Rz" firstAttribute="centerX" secondItem="lhE-eb-9Vv" secondAttribute="centerX" id="xYu-Kp-SRC"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="qI7-BO-Ho3"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular">
+                            <mask key="constraints">
+                                <include reference="qI7-BO-Ho3"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <navigationItem key="navigationItem" id="JkG-vO-gKW"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2K9-Bt-PpE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1246" y="279"/>
+        </scene>
+        <!--Tipo Masa-->
+        <scene sceneID="9IN-yV-AGh">
+            <objects>
+                <viewController id="82Y-NK-kYK" customClass="TipoMasa" customModule="AppPizzas" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="n0u-71-emo"/>
+                        <viewControllerLayoutGuide type="bottom" id="kQc-ap-rse"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="DtG-KN-0FZ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HuZ-SI-Hti">
+                                <rect key="frame" x="176" y="151" width="64" height="64"/>
+                                <animations/>
+                                <state key="normal" image="PizzaCr"/>
+                                <state key="highlighted" image="Smile"/>
+                                <connections>
+                                    <action selector="delagada:" destination="82Y-NK-kYK" eventType="touchUpInside" id="Slb-rP-dwh"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fyr-fj-bLX">
+                                <rect key="frame" x="176" y="267" width="64" height="64"/>
+                                <animations/>
+                                <state key="normal" image="PizzaCr"/>
+                                <state key="highlighted" image="Smile"/>
+                                <connections>
+                                    <action selector="crujiente:" destination="82Y-NK-kYK" eventType="touchUpInside" id="Acv-e9-YKi"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RIB-FT-q5x">
+                                <rect key="frame" x="176" y="391" width="64" height="64"/>
+                                <animations/>
+                                <state key="normal" image="PizzaCr"/>
+                                <state key="highlighted" image="Smile"/>
+                                <connections>
+                                    <action selector="gruesa:" destination="82Y-NK-kYK" eventType="touchUpInside" id="a1J-Yo-aPU"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Delgada" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SEJ-Yz-Ozj">
+                                <rect key="frame" x="176" y="102" width="71" height="36"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" name="SavoyeLetPlain" family="Savoye LET" pointSize="30"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Crujiente" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OLo-p5-iDd">
+                                <rect key="frame" x="176" y="223" width="68" height="36"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" name="SavoyeLetPlain" family="Savoye LET" pointSize="30"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Gruesa" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NFp-8H-qzd">
+                                <rect key="frame" x="184" y="347" width="54" height="36"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" name="SavoyeLetPlain" family="Savoye LET" pointSize="30"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tipo de Masa" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BKE-Ac-El8">
+                                <rect key="frame" x="151" y="44" width="113" height="36"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" name="SavoyeLetPlain" family="Savoye LET" pointSize="30"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CBt-gN-q3R">
+                                <rect key="frame" x="176" y="664" width="64" height="64"/>
+                                <animations/>
+                                <state key="normal" image="next"/>
+                                <state key="highlighted" image="next"/>
+                                <variation key="heightClass=regular" ambiguous="YES" misplaced="YES">
+                                    <rect key="frame" x="268" y="736" width="64" height="64"/>
+                                </variation>
+                                <connections>
+                                    <action selector="nextQuesos:" destination="82Y-NK-kYK" eventType="touchUpInside" id="EdR-cL-GgH"/>
+                                    <segue destination="kAF-fF-l6X" kind="show" id="CjQ-D9-aV7"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="fyr-fj-bLX" firstAttribute="centerX" secondItem="DtG-KN-0FZ" secondAttribute="centerX" constant="1" id="4w2-HT-ckK"/>
+                            <constraint firstItem="SEJ-Yz-Ozj" firstAttribute="top" secondItem="BKE-Ac-El8" secondAttribute="bottom" constant="22" id="6hn-wG-ERd"/>
+                            <constraint firstItem="OLo-p5-iDd" firstAttribute="centerX" secondItem="DtG-KN-0FZ" secondAttribute="centerX" constant="3" id="8ig-Bf-vxg"/>
+                            <constraint firstItem="NFp-8H-qzd" firstAttribute="top" secondItem="fyr-fj-bLX" secondAttribute="bottom" constant="16" id="Dr2-1w-OTd"/>
+                            <constraint firstItem="BKE-Ac-El8" firstAttribute="top" secondItem="n0u-71-emo" secondAttribute="bottom" constant="24" id="E14-Bw-Uf5"/>
+                            <constraint firstItem="fyr-fj-bLX" firstAttribute="top" secondItem="OLo-p5-iDd" secondAttribute="bottom" constant="8" symbolic="YES" id="F0C-69-NdA"/>
+                            <constraint firstItem="HuZ-SI-Hti" firstAttribute="centerX" secondItem="DtG-KN-0FZ" secondAttribute="centerX" constant="1" id="O1r-X7-tLD"/>
+                            <constraint firstItem="RIB-FT-q5x" firstAttribute="centerX" secondItem="DtG-KN-0FZ" secondAttribute="centerX" constant="1" id="OhJ-3c-ajb"/>
+                            <constraint firstItem="NFp-8H-qzd" firstAttribute="centerX" secondItem="DtG-KN-0FZ" secondAttribute="centerX" constant="4" id="WpO-Sr-Joa"/>
+                            <constraint firstItem="BKE-Ac-El8" firstAttribute="centerX" secondItem="DtG-KN-0FZ" secondAttribute="centerX" id="ae6-5Q-dZE"/>
+                            <constraint firstItem="HuZ-SI-Hti" firstAttribute="top" secondItem="SEJ-Yz-Ozj" secondAttribute="bottom" constant="13" id="c5a-Eg-XEi"/>
+                            <constraint firstItem="SEJ-Yz-Ozj" firstAttribute="centerX" secondItem="DtG-KN-0FZ" secondAttribute="centerX" constant="4.5" id="eGd-Pw-XCD"/>
+                            <constraint firstItem="kQc-ap-rse" firstAttribute="top" secondItem="CBt-gN-q3R" secondAttribute="bottom" constant="8" symbolic="YES" id="ljH-V5-kTT"/>
+                            <constraint firstItem="CBt-gN-q3R" firstAttribute="centerX" secondItem="DtG-KN-0FZ" secondAttribute="centerX" constant="1" id="my5-9j-bwV"/>
+                            <constraint firstItem="RIB-FT-q5x" firstAttribute="top" secondItem="NFp-8H-qzd" secondAttribute="bottom" constant="8" symbolic="YES" id="oNf-tE-e36"/>
+                            <constraint firstItem="OLo-p5-iDd" firstAttribute="top" secondItem="HuZ-SI-Hti" secondAttribute="bottom" constant="8" symbolic="YES" id="yI9-EV-mNA"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eFQ-oE-GjY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1680" y="289"/>
+        </scene>
+        <!--Tipo Queso-->
+        <scene sceneID="cMh-P6-dyJ">
+            <objects>
+                <viewController id="kAF-fF-l6X" customClass="TipoQueso" customModule="AppPizzas" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="gkK-tm-2Ev"/>
+                        <viewControllerLayoutGuide type="bottom" id="Bad-Rz-6WO"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Spd-m7-dfp">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ciu-1X-oGd">
+                                <rect key="frame" x="176" y="664" width="64" height="64"/>
+                                <animations/>
+                                <state key="normal" image="next"/>
+                                <state key="highlighted" image="next"/>
+                                <variation key="heightClass=regular" ambiguous="YES" misplaced="YES">
+                                    <rect key="frame" x="268" y="736" width="64" height="64"/>
+                                </variation>
+                                <connections>
+                                    <action selector="nextIngredientes:" destination="kAF-fF-l6X" eventType="touchUpInside" id="9du-Yu-awu"/>
+                                    <segue destination="6VI-t3-5Cy" kind="show" id="Pmb-Bl-gny"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2EW-pt-KPV">
+                                <rect key="frame" x="176" y="119" width="64" height="64"/>
+                                <animations/>
+                                <state key="normal" image="Cheese"/>
+                                <state key="highlighted" image="Smile"/>
+                                <connections>
+                                    <action selector="mozarela:" destination="kAF-fF-l6X" eventType="touchUpInside" id="5v9-cf-DRB"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VZN-pe-6jC">
+                                <rect key="frame" x="176" y="349" width="64" height="64"/>
+                                <animations/>
+                                <state key="normal" image="Cheese"/>
+                                <state key="highlighted" image="Smile"/>
+                                <connections>
+                                    <action selector="parmesano:" destination="kAF-fF-l6X" eventType="touchUpInside" id="LvS-1Y-zLU"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D16-Qn-oPQ">
+                                <rect key="frame" x="176" y="224" width="64" height="64"/>
+                                <animations/>
+                                <state key="normal" image="Cheese"/>
+                                <state key="highlighted" image="Smile"/>
+                                <connections>
+                                    <action selector="cheddar:" destination="kAF-fF-l6X" eventType="touchUpInside" id="Vrv-BK-FB4"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tipo de Queso" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m1h-qb-tVR">
+                                <rect key="frame" x="151" y="28" width="115" height="36"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" name="SavoyeLetPlain" family="Savoye LET" pointSize="30"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mozarela" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="awc-GL-glX">
+                                <rect key="frame" x="168" y="67" width="75" height="36"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" name="SavoyeLetPlain" family="Savoye LET" pointSize="30"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cheddar" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cTI-7x-ggc">
+                                <rect key="frame" x="172" y="191" width="67" height="36"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" name="SavoyeLetPlain" family="Savoye LET" pointSize="30"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Parmesano" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dt3-Fq-HW2">
+                                <rect key="frame" x="164" y="296" width="87" height="36"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" name="SavoyeLetPlain" family="Savoye LET" pointSize="30"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sin Queso" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qeg-Mf-VMV">
+                                <rect key="frame" x="166" y="414" width="83" height="36"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" name="SavoyeLetPlain" family="Savoye LET" pointSize="30"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7k2-uB-4k0">
+                                <rect key="frame" x="176" y="458" width="64" height="64"/>
+                                <animations/>
+                                <state key="normal" image="No"/>
+                                <state key="highlighted" image="Smile"/>
+                                <connections>
+                                    <action selector="sinQueso:" destination="kAF-fF-l6X" eventType="touchUpInside" id="NDb-W1-kEq"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="VZN-pe-6jC" firstAttribute="top" secondItem="D16-Qn-oPQ" secondAttribute="bottom" constant="61" id="2kW-06-Da1"/>
+                            <constraint firstItem="dt3-Fq-HW2" firstAttribute="centerX" secondItem="Spd-m7-dfp" secondAttribute="centerX" id="33y-Mw-ofr"/>
+                            <constraint firstItem="awc-GL-glX" firstAttribute="top" secondItem="m1h-qb-tVR" secondAttribute="bottom" constant="3" id="5oQ-A4-Xc1"/>
+                            <constraint firstItem="ciu-1X-oGd" firstAttribute="centerX" secondItem="Spd-m7-dfp" secondAttribute="centerX" constant="1" id="7zB-Hq-tx5"/>
+                            <constraint firstItem="cTI-7x-ggc" firstAttribute="top" secondItem="2EW-pt-KPV" secondAttribute="bottom" constant="8" symbolic="YES" id="7zk-Cm-S3g"/>
+                            <constraint firstItem="7k2-uB-4k0" firstAttribute="top" secondItem="qeg-Mf-VMV" secondAttribute="bottom" constant="8" symbolic="YES" id="9g4-Ek-pqL"/>
+                            <constraint firstItem="m1h-qb-tVR" firstAttribute="top" secondItem="gkK-tm-2Ev" secondAttribute="bottom" constant="8" symbolic="YES" id="B3G-xQ-rc8"/>
+                            <constraint firstItem="Bad-Rz-6WO" firstAttribute="top" secondItem="ciu-1X-oGd" secondAttribute="bottom" constant="8" symbolic="YES" id="CRG-0g-7vj"/>
+                            <constraint firstItem="qeg-Mf-VMV" firstAttribute="top" secondItem="VZN-pe-6jC" secondAttribute="bottom" constant="1" id="DLK-IL-9uW"/>
+                            <constraint firstItem="cTI-7x-ggc" firstAttribute="centerX" secondItem="Spd-m7-dfp" secondAttribute="centerX" constant="-2" id="EuJ-yt-QTL"/>
+                            <constraint firstItem="7k2-uB-4k0" firstAttribute="centerX" secondItem="Spd-m7-dfp" secondAttribute="centerX" constant="1" id="GJy-j3-gvp"/>
+                            <constraint firstItem="2EW-pt-KPV" firstAttribute="top" secondItem="gkK-tm-2Ev" secondAttribute="bottom" constant="99" id="KfO-63-HxG"/>
+                            <constraint firstItem="VZN-pe-6jC" firstAttribute="centerX" secondItem="Spd-m7-dfp" secondAttribute="centerX" constant="1" id="PE2-vq-f5n"/>
+                            <constraint firstItem="qeg-Mf-VMV" firstAttribute="centerX" secondItem="Spd-m7-dfp" secondAttribute="centerX" id="ZdT-Zz-cbN"/>
+                            <constraint firstItem="awc-GL-glX" firstAttribute="centerX" secondItem="Spd-m7-dfp" secondAttribute="centerX" constant="-2" id="eOy-bi-ogu"/>
+                            <constraint firstItem="2EW-pt-KPV" firstAttribute="centerX" secondItem="Spd-m7-dfp" secondAttribute="centerX" constant="1" id="kFL-ft-f1P"/>
+                            <constraint firstItem="dt3-Fq-HW2" firstAttribute="top" secondItem="D16-Qn-oPQ" secondAttribute="bottom" constant="8" symbolic="YES" id="mtK-Kx-HB1"/>
+                            <constraint firstItem="D16-Qn-oPQ" firstAttribute="top" secondItem="2EW-pt-KPV" secondAttribute="bottom" constant="41" id="p0f-Vk-6yM"/>
+                            <constraint firstItem="D16-Qn-oPQ" firstAttribute="centerX" secondItem="Spd-m7-dfp" secondAttribute="centerX" constant="1" id="uhg-SP-WXs"/>
+                            <constraint firstItem="m1h-qb-tVR" firstAttribute="centerX" secondItem="Spd-m7-dfp" secondAttribute="centerX" constant="1" id="z4Y-BW-N0U"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="grW-8X-9XJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2153" y="279"/>
+        </scene>
+        <!--Ingredientes-->
+        <scene sceneID="ZlH-Ua-zOl">
+            <objects>
+                <viewController id="6VI-t3-5Cy" customClass="Ingredientes" customModule="AppPizzas" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ZcT-gh-L3i"/>
+                        <viewControllerLayoutGuide type="bottom" id="0Fp-Z6-hBP"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ckr-EK-TDs">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H4B-hu-o1p">
+                                <rect key="frame" x="182" y="672" width="64" height="64"/>
+                                <animations/>
+                                <state key="normal" image="next"/>
+                                <state key="highlighted" image="next"/>
+                                <variation key="heightClass=regular" ambiguous="YES" misplaced="YES">
+                                    <rect key="frame" x="268" y="736" width="64" height="64"/>
+                                </variation>
+                                <connections>
+                                    <action selector="nextConfirmacion:" destination="6VI-t3-5Cy" eventType="touchUpInside" id="cCp-Lx-XfT"/>
+                                    <action selector="nextIngredientes:" destination="kAF-fF-l6X" eventType="touchUpInside" id="tOa-WR-U7p"/>
+                                    <segue destination="3l9-bJ-Ecw" kind="show" id="agi-aA-JXr"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HKp-4v-w3y">
+                                <rect key="frame" x="178" y="130" width="56" height="48"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" name="SavoyeLetPlain" family="Savoye LET" pointSize="30"/>
+                                <state key="normal" title="Jamón"/>
+                                <connections>
+                                    <action selector="ingredientes:" destination="6VI-t3-5Cy" eventType="touchUpInside" id="3cv-SX-iTn"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7w8-h2-kEF">
+                                <rect key="frame" x="167" y="186" width="78" height="48"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" name="SavoyeLetPlain" family="Savoye LET" pointSize="30"/>
+                                <state key="normal" title="Pepperoni"/>
+                                <connections>
+                                    <action selector="ingredientes:" destination="6VI-t3-5Cy" eventType="touchUpInside" id="1zS-fZ-M9H"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hEE-GL-GXf">
+                                <rect key="frame" x="186" y="249" width="41" height="48"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" name="SavoyeLetPlain" family="Savoye LET" pointSize="30"/>
+                                <state key="normal" title="Pavo"/>
+                                <connections>
+                                    <action selector="ingredientes:" destination="6VI-t3-5Cy" eventType="touchUpInside" id="yet-Zr-fcL"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RXt-mA-aIZ">
+                                <rect key="frame" x="168" y="310" width="76" height="48"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" name="SavoyeLetPlain" family="Savoye LET" pointSize="30"/>
+                                <state key="normal" title="Salchicha"/>
+                                <connections>
+                                    <action selector="ingredientes:" destination="6VI-t3-5Cy" eventType="touchUpInside" id="sLf-fL-fyH"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Eii-eE-UCT">
+                                <rect key="frame" x="170" y="366" width="78" height="56"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="56" id="DZV-a4-Hh4"/>
+                                    <constraint firstAttribute="width" constant="78" id="olU-2F-gn0"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="SavoyeLetPlain" family="Savoye LET" pointSize="30"/>
+                                <state key="normal" title="Aceituna"/>
+                                <connections>
+                                    <action selector="ingredientes:" destination="6VI-t3-5Cy" eventType="touchUpInside" id="VbH-3t-aJq"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TBG-mh-zV3">
+                                <rect key="frame" x="180" y="430" width="59" height="48"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" name="SavoyeLetPlain" family="Savoye LET" pointSize="30"/>
+                                <state key="normal" title="Cebolla"/>
+                                <connections>
+                                    <action selector="ingredientes:" destination="6VI-t3-5Cy" eventType="touchUpInside" id="qVi-nJ-dki"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7OP-Y9-bYy">
+                                <rect key="frame" x="175" y="486" width="69" height="48"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" name="SavoyeLetPlain" family="Savoye LET" pointSize="30"/>
+                                <state key="normal" title="Pimiento"/>
+                                <connections>
+                                    <action selector="ingredientes:" destination="6VI-t3-5Cy" eventType="touchUpInside" id="v1R-q3-OA4"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hbh-IG-Xun">
+                                <rect key="frame" x="190" y="542" width="39" height="48"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" name="SavoyeLetPlain" family="Savoye LET" pointSize="30"/>
+                                <state key="normal" title="Piña"/>
+                                <connections>
+                                    <action selector="ingredientes:" destination="6VI-t3-5Cy" eventType="touchUpInside" id="ATU-Rq-upb"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ywk-zY-odw">
+                                <rect key="frame" x="178" y="598" width="65" height="48"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" name="SavoyeLetPlain" family="Savoye LET" pointSize="30"/>
+                                <state key="normal" title="Anchoa"/>
+                                <connections>
+                                    <action selector="ingredientes:" destination="6VI-t3-5Cy" eventType="touchUpInside" id="eNI-b3-Mrr"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Elija de 1 a 5 Ingredientes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3cz-j2-awR">
+                                <rect key="frame" x="109" y="86" width="200" height="36"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" name="SavoyeLetPlain" family="Savoye LET" pointSize="30"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="3cz-j2-awR" firstAttribute="centerX" secondItem="ckr-EK-TDs" secondAttribute="centerX" constant="2" id="0p8-3G-rgL"/>
+                            <constraint firstItem="RXt-mA-aIZ" firstAttribute="centerX" secondItem="ckr-EK-TDs" secondAttribute="centerX" constant="-1" id="6xA-F9-I51"/>
+                            <constraint firstItem="H4B-hu-o1p" firstAttribute="top" secondItem="Ywk-zY-odw" secondAttribute="bottom" constant="26" id="8xR-c7-TVk"/>
+                            <constraint firstItem="7OP-Y9-bYy" firstAttribute="centerX" secondItem="ckr-EK-TDs" secondAttribute="centerX" constant="2.5" id="Cud-c2-3dR"/>
+                            <constraint firstItem="HKp-4v-w3y" firstAttribute="centerX" secondItem="ckr-EK-TDs" secondAttribute="centerX" constant="-1" id="E7C-TR-y28"/>
+                            <constraint firstItem="HKp-4v-w3y" firstAttribute="top" secondItem="3cz-j2-awR" secondAttribute="bottom" constant="8" symbolic="YES" id="In4-XM-870"/>
+                            <constraint firstItem="Eii-eE-UCT" firstAttribute="top" secondItem="RXt-mA-aIZ" secondAttribute="bottom" constant="8" symbolic="YES" id="JWo-FZ-qj6"/>
+                            <constraint firstItem="Ywk-zY-odw" firstAttribute="top" secondItem="Hbh-IG-Xun" secondAttribute="bottom" constant="8" symbolic="YES" id="M0t-P1-6At"/>
+                            <constraint firstItem="7w8-h2-kEF" firstAttribute="top" secondItem="HKp-4v-w3y" secondAttribute="bottom" constant="8" symbolic="YES" id="Oes-Kv-d8K"/>
+                            <constraint firstItem="7OP-Y9-bYy" firstAttribute="top" secondItem="TBG-mh-zV3" secondAttribute="bottom" constant="8" symbolic="YES" id="PA2-0z-tuO"/>
+                            <constraint firstItem="H4B-hu-o1p" firstAttribute="centerX" secondItem="ckr-EK-TDs" secondAttribute="centerX" constant="7" id="QWg-yr-wb9"/>
+                            <constraint firstItem="hEE-GL-GXf" firstAttribute="centerX" secondItem="ckr-EK-TDs" secondAttribute="centerX" id="Zqh-GU-NAU"/>
+                            <constraint firstItem="Hbh-IG-Xun" firstAttribute="centerX" secondItem="ckr-EK-TDs" secondAttribute="centerX" constant="2.5" id="Ztg-g4-Tyr"/>
+                            <constraint firstItem="Hbh-IG-Xun" firstAttribute="top" secondItem="7OP-Y9-bYy" secondAttribute="bottom" constant="8" symbolic="YES" id="c8r-Ab-uSR"/>
+                            <constraint firstItem="Eii-eE-UCT" firstAttribute="centerX" secondItem="ckr-EK-TDs" secondAttribute="centerX" constant="2" id="eHE-Ub-M7l"/>
+                            <constraint firstItem="RXt-mA-aIZ" firstAttribute="top" secondItem="hEE-GL-GXf" secondAttribute="bottom" constant="13" id="gn1-kk-yck"/>
+                            <constraint firstItem="TBG-mh-zV3" firstAttribute="top" secondItem="Eii-eE-UCT" secondAttribute="bottom" constant="8" symbolic="YES" id="gzq-iJ-9MT"/>
+                            <constraint firstItem="TBG-mh-zV3" firstAttribute="centerX" secondItem="ckr-EK-TDs" secondAttribute="centerX" constant="2.5" id="hK1-5y-Zaa"/>
+                            <constraint firstItem="Ywk-zY-odw" firstAttribute="centerX" secondItem="ckr-EK-TDs" secondAttribute="centerX" constant="3.5" id="haD-fl-cnV"/>
+                            <constraint firstItem="7w8-h2-kEF" firstAttribute="centerX" secondItem="ckr-EK-TDs" secondAttribute="centerX" constant="-1" id="kew-cT-AKD"/>
+                            <constraint firstItem="hEE-GL-GXf" firstAttribute="top" secondItem="7w8-h2-kEF" secondAttribute="bottom" constant="15" id="oOR-2n-mI3"/>
+                            <constraint firstItem="H4B-hu-o1p" firstAttribute="bottom" secondItem="0Fp-Z6-hBP" secondAttribute="top" id="zap-qP-awQ"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Viq-vh-b9L" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2643" y="263"/>
+        </scene>
+        <!--Pizza Correcta-->
+        <scene sceneID="8SE-H3-Dza">
+            <objects>
+                <viewController id="3l9-bJ-Ecw" customClass="PizzaCorrecta" customModule="AppPizzas" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Zrh-IT-RIp"/>
+                        <viewControllerLayoutGuide type="bottom" id="ls6-je-RBm"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="7Ie-nY-jkj">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Queso" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nqe-GQ-aHY">
+                                <rect key="frame" x="100" y="222" width="230" height="36"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" name="SavoyeLetPlain" family="Savoye LET" pointSize="30"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ingredientes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gxx-f7-pOV">
+                                <rect key="frame" x="167" y="286" width="96" height="36"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" name="SavoyeLetPlain" family="Savoye LET" pointSize="30"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tamaño" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S8V-Pe-060">
+                                <rect key="frame" x="100" y="81" width="230" height="36"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" name="SavoyeLetPlain" family="Savoye LET" pointSize="30"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Masa" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T9K-WP-mSu">
+                                <rect key="frame" x="100" y="151" width="230" height="36"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" name="SavoyeLetPlain" family="Savoye LET" pointSize="30"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="NLT-h1-lP5">
+                                <rect key="frame" x="93" y="330" width="245" height="196"/>
+                                <animations/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="¿Desea Realizar la Compra?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O1H-yr-VO7">
+                                <rect key="frame" x="93" y="548" width="229" height="36"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" name="SavoyeLetPlain" family="Savoye LET" pointSize="30"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yWg-D6-zKb">
+                                <rect key="frame" x="111" y="606" width="30" height="48"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" name="SavoyeLetPlain" family="Savoye LET" pointSize="30"/>
+                                <state key="normal" title="Si"/>
+                                <connections>
+                                    <segue destination="4HW-sZ-11g" kind="showDetail" id="6cN-j6-8gI"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qwe-Li-51f">
+                                <rect key="frame" x="273" y="606" width="30" height="48"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" name="SavoyeLetPlain" family="Savoye LET" pointSize="30"/>
+                                <state key="normal" title="No"/>
+                                <connections>
+                                    <segue destination="4ak-F8-g4X" kind="show" id="gof-Mb-P0M"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="S8V-Pe-060" firstAttribute="leading" secondItem="T9K-WP-mSu" secondAttribute="leading" id="2ZF-7L-zfh"/>
+                            <constraint firstItem="NLT-h1-lP5" firstAttribute="centerX" secondItem="7Ie-nY-jkj" secondAttribute="centerX" constant="8.5" id="3Kb-pY-v34"/>
+                            <constraint firstItem="T9K-WP-mSu" firstAttribute="top" secondItem="S8V-Pe-060" secondAttribute="bottom" constant="34" id="CVs-Q8-FOd"/>
+                            <constraint firstItem="yWg-D6-zKb" firstAttribute="baseline" secondItem="Qwe-Li-51f" secondAttribute="baseline" id="FjB-UM-syr"/>
+                            <constraint firstItem="Gxx-f7-pOV" firstAttribute="centerX" secondItem="7Ie-nY-jkj" secondAttribute="centerX" constant="8" id="HC9-rW-ZIJ"/>
+                            <constraint firstItem="O1H-yr-VO7" firstAttribute="leading" secondItem="NLT-h1-lP5" secondAttribute="leading" id="Lcw-rB-Ncf"/>
+                            <constraint firstItem="S8V-Pe-060" firstAttribute="top" secondItem="Zrh-IT-RIp" secondAttribute="bottom" constant="61" id="POD-4e-INB"/>
+                            <constraint firstItem="Qwe-Li-51f" firstAttribute="centerX" secondItem="7Ie-nY-jkj" secondAttribute="centerX" constant="81" id="RFn-QK-mn0"/>
+                            <constraint firstItem="yWg-D6-zKb" firstAttribute="centerX" secondItem="7Ie-nY-jkj" secondAttribute="centerX" constant="-81" id="TV5-g7-6QY"/>
+                            <constraint firstItem="NLT-h1-lP5" firstAttribute="trailing" secondItem="nqe-GQ-aHY" secondAttribute="trailing" constant="8" id="UiR-nh-TJD"/>
+                            <constraint firstItem="T9K-WP-mSu" firstAttribute="centerX" secondItem="7Ie-nY-jkj" secondAttribute="centerX" constant="8" id="Umv-vm-ZQr"/>
+                            <constraint firstItem="yWg-D6-zKb" firstAttribute="top" secondItem="O1H-yr-VO7" secondAttribute="bottom" constant="22" id="YKz-Nq-c45"/>
+                            <constraint firstItem="S8V-Pe-060" firstAttribute="centerX" secondItem="7Ie-nY-jkj" secondAttribute="centerX" constant="8" id="Zg3-JF-7V7"/>
+                            <constraint firstItem="nqe-GQ-aHY" firstAttribute="top" secondItem="T9K-WP-mSu" secondAttribute="bottom" constant="35" id="a0e-ea-tLL"/>
+                            <constraint firstItem="Gxx-f7-pOV" firstAttribute="top" secondItem="nqe-GQ-aHY" secondAttribute="bottom" constant="28" id="bEp-ch-Txg"/>
+                            <constraint firstItem="NLT-h1-lP5" firstAttribute="top" secondItem="Gxx-f7-pOV" secondAttribute="bottom" constant="8" id="d9Q-FJ-lHA"/>
+                            <constraint firstItem="nqe-GQ-aHY" firstAttribute="leading" secondItem="T9K-WP-mSu" secondAttribute="leading" id="fQc-Wu-0UK"/>
+                            <constraint firstItem="nqe-GQ-aHY" firstAttribute="centerX" secondItem="7Ie-nY-jkj" secondAttribute="centerX" constant="8" id="kgc-nc-7o4"/>
+                            <constraint firstItem="O1H-yr-VO7" firstAttribute="top" secondItem="NLT-h1-lP5" secondAttribute="bottom" constant="22" id="orI-kn-wFT"/>
+                            <constraint firstItem="ls6-je-RBm" firstAttribute="top" secondItem="NLT-h1-lP5" secondAttribute="bottom" constant="210" id="r6h-L3-cCF"/>
+                            <constraint firstItem="S8V-Pe-060" firstAttribute="leading" secondItem="7Ie-nY-jkj" secondAttribute="leadingMargin" constant="80" id="rSI-Fg-HjE"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+                    <connections>
+                        <outlet property="masa" destination="T9K-WP-mSu" id="chh-Dd-kXz"/>
+                        <outlet property="queso" destination="nqe-GQ-aHY" id="s8j-XT-GxO"/>
+                        <outlet property="tablaIngredientes" destination="NLT-h1-lP5" id="VhH-5w-yUt"/>
+                        <outlet property="tamano" destination="S8V-Pe-060" id="ptf-8T-Rq3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Yta-5O-Xi6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3172" y="263"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="kXz-ck-siO">
+            <objects>
+                <viewController id="4HW-sZ-11g" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="vV6-U7-zUN"/>
+                        <viewControllerLayoutGuide type="bottom" id="Ph1-6b-eW6"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="zj8-Rf-cfb">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pizza Lista Gracias por su Compra" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hz8-0u-djg">
+                                <rect key="frame" x="71" y="98" width="273" height="36"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="36" id="a98-i4-UXm"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="SavoyeLetPlain" family="Savoye LET" pointSize="30"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pizzero2" translatesAutoresizingMaskIntoConstraints="NO" id="9q3-M1-Ee2">
+                                <rect key="frame" x="56" y="185" width="338" height="326"/>
+                                <animations/>
+                            </imageView>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Ph1-6b-eW6" firstAttribute="top" secondItem="9q3-M1-Ee2" secondAttribute="bottom" constant="225" id="AXz-Da-HA8"/>
+                            <constraint firstItem="9q3-M1-Ee2" firstAttribute="leading" secondItem="zj8-Rf-cfb" secondAttribute="leadingMargin" constant="36" id="E2X-Df-iBB"/>
+                            <constraint firstItem="hz8-0u-djg" firstAttribute="top" secondItem="vV6-U7-zUN" secondAttribute="bottom" constant="78" id="HRM-YF-I2M"/>
+                            <constraint firstItem="9q3-M1-Ee2" firstAttribute="centerX" secondItem="zj8-Rf-cfb" secondAttribute="centerX" constant="18" id="T5c-lN-NoA"/>
+                            <constraint firstItem="9q3-M1-Ee2" firstAttribute="top" secondItem="hz8-0u-djg" secondAttribute="bottom" constant="51" id="VI6-ty-bV3"/>
+                            <constraint firstItem="hz8-0u-djg" firstAttribute="centerX" secondItem="zj8-Rf-cfb" secondAttribute="centerX" id="cCS-q1-VVE"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CZP-7Q-pOJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3755" y="321"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="xzT-yZ-sgn">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="bVY-V5-AZP" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="1S8-Nz-Veb">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="4ak-F8-g4X" kind="relationship" relationship="rootViewController" id="Emp-S1-3GB"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dXh-UA-jQ7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="751" y="289"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Cheese" width="64" height="64"/>
+        <image name="No" width="64" height="64"/>
+        <image name="PizzaCr" width="64" height="64"/>
+        <image name="PizzaTam" width="64" height="64"/>
+        <image name="Pizzero" width="250" height="250"/>
+        <image name="Smile" width="64" height="64"/>
+        <image name="next" width="64" height="64"/>
+        <image name="pizzero2" width="1024" height="928"/>
+    </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="gof-Mb-P0M"/>
+    </inferredMetricsTieBreakers>
 </document>
