@@ -698,7 +698,7 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pizzero2" translatesAutoresizingMaskIntoConstraints="NO" id="9q3-M1-Ee2">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Pizzero" translatesAutoresizingMaskIntoConstraints="NO" id="9q3-M1-Ee2">
                                 <rect key="frame" x="56" y="185" width="338" height="326"/>
                                 <animations/>
                             </imageView>
@@ -748,7 +748,6 @@
         <image name="Pizzero" width="250" height="250"/>
         <image name="Smile" width="64" height="64"/>
         <image name="next" width="64" height="64"/>
-        <image name="pizzero2" width="1024" height="928"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="gof-Mb-P0M"/>
